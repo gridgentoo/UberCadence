@@ -290,7 +290,7 @@ func connectToCassandra(c *cli.Context) *gocql.Session {
 	}
 
 	clusterCfg, err := cassandra.NewCassandraCluster(cassandraConfig, 10)
-	clusterCfg.SerialConsistency = gocql.LocalSerial
+	clusterCfg.SerialConsistency = gocql.Serial
 	clusterCfg.NumConns = 20
 	if err != nil {
 		ErrorAndExit("connect to Cassandra failed", err)
