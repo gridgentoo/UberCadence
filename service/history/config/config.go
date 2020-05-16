@@ -265,9 +265,9 @@ func New(dc *dynamicconfig.Collection, numberOfShards int, storeType string, isA
 		EventsCacheTTL:                  dc.GetDurationProperty(dynamicconfig.EventsCacheTTL, time.Hour),
 		EventsCacheGlobalEnable:         dc.GetBoolProperty(dynamicconfig.EventsCacheGlobalEnable, true),
 		// EventsCacheGlobalInitialSize default value 16k shards * 128
-		EventsCacheGlobalInitialSize: dc.GetIntProperty(dynamicconfig.EventsCacheInitialSize, 81920),
+		EventsCacheGlobalInitialSize: dc.GetIntProperty(dynamicconfig.EventsCacheInitialSize, 34133),
 		// EventsCacheGlobalMaxSize efault value 16k shards * 512
-		EventsCacheGlobalMaxSize:             dc.GetIntProperty(dynamicconfig.EventsCacheMaxSize, 327680),
+		EventsCacheGlobalMaxSize:             dc.GetIntProperty(dynamicconfig.EventsCacheMaxSize, 136533),
 		RangeSizeBits:                        20, // 20 bits for sequencer, 2^20 sequence number for any range
 		AcquireShardInterval:                 dc.GetDurationProperty(dynamicconfig.AcquireShardInterval, time.Minute),
 		AcquireShardConcurrency:              dc.GetIntProperty(dynamicconfig.AcquireShardConcurrency, 1),
