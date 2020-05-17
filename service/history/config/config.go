@@ -263,7 +263,7 @@ func New(dc *dynamicconfig.Collection, numberOfShards int, storeType string, isA
 		EventsCacheInitialSize:          dc.GetIntProperty(dynamicconfig.EventsCacheInitialSize, 128),
 		EventsCacheMaxSize:              dc.GetIntProperty(dynamicconfig.EventsCacheMaxSize, 512),
 		EventsCacheTTL:                  dc.GetDurationProperty(dynamicconfig.EventsCacheTTL, time.Hour),
-		EventsCacheGlobalEnable:         dc.GetBoolProperty(dynamicconfig.EventsCacheGlobalEnable, true),
+		EventsCacheGlobalEnable:         dc.GetBoolProperty(dynamicconfig.EventsCacheGlobalEnable, false),
 		// EventsCacheGlobalInitialSize default value 16k shards * 128
 		EventsCacheGlobalInitialSize: dc.GetIntProperty(dynamicconfig.EventsCacheInitialSize, 17066),
 		// EventsCacheGlobalMaxSize efault value 16k shards * 512
