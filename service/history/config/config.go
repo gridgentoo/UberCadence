@@ -268,9 +268,9 @@ func New(dc *dynamicconfig.Collection, numberOfShards int, storeType string, isA
 		HistoryCacheTTL:                      dc.GetDurationProperty(dynamicconfig.HistoryCacheTTL, time.Hour),
 		EventsCacheInitialSize:               dc.GetIntProperty(dynamicconfig.EventsCacheInitialSize, 128),
 		EventsCacheMaxSize:                   dc.GetIntProperty(dynamicconfig.EventsCacheMaxSize, 512),
-		EventsCacheMaxSizeInKb:               dc.GetIntProperty(dynamicconfig.EventsCacheMaxSizeInKb, 0),
+		EventsCacheMaxSizeInKb:               dc.GetIntProperty(dynamicconfig.EventsCacheMaxSizeInKb, 1048576),
 		EventsCacheTTL:                       dc.GetDurationProperty(dynamicconfig.EventsCacheTTL, time.Hour),
-		EventsCacheGlobalEnable:              dc.GetBoolProperty(dynamicconfig.EventsCacheGlobalEnable, false),
+		EventsCacheGlobalEnable:              dc.GetBoolProperty(dynamicconfig.EventsCacheGlobalEnable, true),
 		EventsCacheGlobalInitialSize:         dc.GetIntProperty(dynamicconfig.EventsCacheInitialSize, 4096),
 		EventsCacheGlobalMaxSize:             dc.GetIntProperty(dynamicconfig.EventsCacheMaxSize, 65536),
 		RangeSizeBits:                        20, // 20 bits for sequencer, 2^20 sequence number for any range
